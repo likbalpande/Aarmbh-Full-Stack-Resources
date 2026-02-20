@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: yellow;
+    padding: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    justify-content: space-between;
+}
+
+.card {
+    height: 150px;
+    background-color: lightgray;
+    border: 2px solid brown;
+    border-radius: 16px;
+
+    width: 252px;
+
+    /* flex-grow: 1; */
+}

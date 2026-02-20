@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: lime;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* row wise alignment */
+    align-content: center; /* whole content alignment */
+}
+
+.card-1 {
+    height: 100px;
+    width: 400px;
+    background-color: blue;
+}
+
+.card-2 {
+    height: 200px;
+    width: 400px;
+    background-color: red;
+}

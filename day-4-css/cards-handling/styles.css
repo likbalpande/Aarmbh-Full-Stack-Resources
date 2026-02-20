@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 500px;
+    background-color: lime;
+    padding: 32px 133px;
+
+    display: flex;
+    gap: 202px;
+}
+
+div {
+    border: 1px solid brown;
+    border-radius: 20px;
+    background-color: yellow;
+}
+
+#card-1 {
+    height: 150px;
+    flex-grow: 1;
+}
+
+#card-3 {
+    height: 300px;
+    flex-grow: 1;
+}
+
+#card-4 {
+    height: 50px;
+    flex-grow: 1;
+}
+
+section {
+    margin-top: 24px;
+    height: 500px;
+    background-color: lime;
+    padding: 32px 133px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-11 {
+    height: 150px;
+    width: 142px;
+}
+
+#card-31 {
+    height: 300px;
+    width: 142px;
+}
+
+#card-41 {
+    height: 50px;
+    width: 142px;
+}

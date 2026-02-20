@@ -1,0 +1,25 @@
+body {
+    background-color: blanchedalmond;
+}
+
+section {
+    background-color: lightgray;
+    padding: 16px;
+    margin: 32px;
+}
+
+#markup {
+    font-size: 20px;
+
+    color: red;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    background-color: yellow;
+
+    letter-spacing: 3px;
+
+    font-family: fantasy;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #something {
+            border-top: 50px solid darkblue;
+            border-right: 50px solid red;
+            border-bottom: 50px solid green;
+            border-left: 50px solid black;
+        }
+
+        #all-borders {
+            border-top: 50px solid darkblue;
+            border-right: 50px solid red;
+            border-bottom: 50px solid green;
+            border-left: 50px solid black;
+        }
+
+        #top-border-visible {
+            border-top: 50px solid darkblue;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid transparent;
+        }
+
+        #triangle {
+            border-top: 50px solid darkblue;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid transparent;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="something">Something</div>
+    <br />
+    <br />
+    <div id="all-borders"></div>
+    <br />
+    <br />
+    <div id="top-border-visible"></div>
+    <br />
+    <br />
+    <div id="triangle"></div>
+</body>
+
+</html>

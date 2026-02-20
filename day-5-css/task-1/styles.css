@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#hero-section {
+    background-color: #000732;
+    padding: 60px 20px;
+}
+
+#hero-section-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    color: #f8fafc;
+}
+
+.green-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #b2ff3e;
+    border-radius: 50%;
+}
+
+.launch-banner {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 60px;
+    padding: 8px 16px;
+}
+
+.hero-title {
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.highlight-hero-text {
+    color: #fbbf23;
+}
+
+.action-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+
+.request-callback-btn {
+    background-color: white;
+}
+
+.enrol-now-btn {
+    background-color: #fcd34d;
+}
+
+@media (width > 768px) {
+    .action-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .action-btn {
+        width: 220px;
+    }
+}

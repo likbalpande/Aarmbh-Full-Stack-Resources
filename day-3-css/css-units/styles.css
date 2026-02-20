@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: bisque;
+    /* vw, vh; view port; */
+    height: 10vh; /* vh --> view port height */
+    width: 60vw; /* vw --> view port width */
+    /* gives remaining space equally to left and right 
+    (work only in horizontal direction) */
+    margin: auto;
+}
+
+.btn {
+    background-color: lime;
+    border: 1px solid brown;
+    font-weight: bold;
+    margin: 20px;
+    padding: 0.6rem 1rem;
+    border-radius: 0.6rem;
+}
+
+#button {
+    font-size: 20px;
+}
+
+#button-small {
+    font-size: 12px;
+}
+
+#button-small {
+    font-size: 16px;
+}
+
+#button-large {
+    font-size: 24px;
+}
+
+#button-larger {
+    font-size: 30px;
+}
+
+#test-1 {
+    font-size: 2rem;
+}
+
+#test-2 {
+    font-size: 2rem;
+}
+
+#login-button {
+    background-color: lime;
+    border: 1px solid brown;
+    font-weight: bold;
+    margin: 20px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+
+    transition: all 600ms linear;
+}
+
+#login-button:hover {
+    background-color: red;
+    color: white;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#login-button:active {
+    transition-duration: 0;
+    scale: 0.1;
+}
+
+p:first-child {
+    background-color: yellow;
+}
+
+a:first-of-type {
+    background-color: yellow;
+    /* visibility: hidden; */
+    /* display: none; */
+}
+
+button {
+    background-color: yellow;
+}

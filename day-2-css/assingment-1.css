@@ -1,0 +1,109 @@
+div {
+    margin: 50px;
+}
+
+#square {
+    background: yellow;
+    border: 20px solid brown;
+    height: 100px;
+    width: 100px;
+}
+
+#rectangle {
+    background: yellow;
+    border: 20px solid brown;
+    height: 100px;
+    width: 200px;
+}
+
+#rounded-rectangle {
+    background: yellow;
+    border: 20px solid brown;
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+#circle {
+    background: yellow;
+    border: 20px solid brown;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#oval {
+    background: yellow;
+    border: 20px solid brown;
+    height: 100px;
+    width: 140px;
+    border-radius: 50%;
+}
+#some-shape-1 {
+    background: yellow;
+    border-top: 20px solid blue;
+    border-bottom: 20px solid green;
+    border-left: 20px solid brown;
+    border-right: 20px solid purple;
+    height: 100px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+#some-shape-2 {
+    background: yellow;
+    border-top: 20px solid yellow;
+    border-bottom: 20px solid yellow;
+    border-left: 20px solid brown;
+    border-right: 20px solid purple;
+    height: 100px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+#some-shape-3 {
+    background: yellow;
+    border-top: 20px solid blue;
+    border-bottom: 20px solid green;
+    border-left: 20px solid brown;
+    border-right: 20px solid purple;
+    height: 100px;
+    width: 140px;
+}
+
+#some-shape-4 {
+    background: yellow;
+    border-top: 50px solid blue;
+    border-bottom: 50px solid green;
+    border-left: 50px solid brown;
+    border-right: 50px solid purple;
+    height: 0px;
+    width: 0px;
+}
+
+#some-shape-5 {
+    border-top: 50px solid blue;
+    border-bottom: 50px solid blue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0px;
+    width: 0px;
+}
+
+#triangle {
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid blue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0px;
+    width: 0px;
+}
+
+#triangle-optimized {
+    border-top: 0px solid transparent;
+    border-bottom: 50px solid blue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0px;
+    width: 0px;
+}
