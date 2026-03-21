@@ -97,26 +97,71 @@
 
 // --------------------------------------------
 
-const arr = ["Mango", "Grapes", "Apple", "Watermelon"];
+// const arr = ["Mango", "Grapes", "Apple", "Watermelon"];
 
-console.log("---------");
+// console.log("---------");
 
-// usual FOR loop
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+// // usual FOR loop
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
 
-console.log("---------");
+// console.log("---------");
 
-// FOR - IN loop --> it gives you KEYS
-for (let i in arr) {
-    console.log(i);
-    console.log(typeof i);
-}
+// // FOR - IN loop --> it gives you KEYS
+// for (let i in arr) {
+//     console.log(i);
+//     console.log(typeof i);
+// }
 
-console.log("---------");
+// console.log("---------");
 
-// FOR - OF loop --> it gives you VALUES
-for (let i of arr) {
-    console.log(i);
-}
+// // FOR - OF loop --> it gives you VALUES
+// for (let i of arr) {
+//     console.log(i);
+// }
+
+// // ----------------------------------------------------------
+
+// // BOM - Browser Object Model
+
+// // console.log(window); // Window object gives you access to everything that browser allows javascript to use
+
+// // console.log("-------------------");
+
+// // // console.log(window.document); // Document object gives you access to HTML related things
+// // console.dir(window.document);
+
+// // console.log("-------------------");
+
+// // console.dir(window.document.children);
+
+// // console.log("-------------------");
+
+// // console.dir(window.document.children[0]); --> HTML
+
+// // console.log("-------------------");
+
+// // console.dir(window.document.children[0].children);
+
+// // console.log("-------------------");
+
+// // console.dir(window.document.children[0].children[1]);  --> BODY
+
+// // console.log("-------------------");
+
+// // console.dir(window.document.children[0].children[1].children[0]); --> H1
+
+// // console.log("-------------------");
+
+// window.document.children[0].children[1].children[0].style.backgroundColor = "lime";
+
+const headings = document.getElementsByTagName("h1");
+console.log(headings);
+
+const images = document.getElementsByTagName("img");
+console.log(images);
+
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// ---------------------------------------------------------

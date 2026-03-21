@@ -5,11 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid brown;
+            background-color: yellow;
+            margin: 2rem auto;
+            max-width: fit-content;
+        }
+
+        .card div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .card img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
 
+    <header></header>
+    <div>
+        <div class="card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541">
+            <div>
+                <p>Name: Likhilesh</p>
+                <p>City: Delhi</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541">
+            <div>
+                <p>Name: Likhilesh</p>
+                <p>City: Delhi</p>
+            </div>
+        </div>
+    </div>
     <h1>Hello JS!</h1>
+    <footer></footer>
 
     <script src="./script.js"></script>
 </body>
