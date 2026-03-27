@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid brown;
+            background-color: yellow;
+            margin: 2rem auto;
+            max-width: fit-content;
+        }
+
+
+        .card div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+
+        .card img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 24px;
+            font-size: 24px;
+            background-color: brown;
+            color: azure;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            padding: 24px;
+            font-size: 16px;
+            background-color: brown;
+            color: azure;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            font-size: 24px;
+
+        }
+
+        button {
+            padding: 0.5em 1em;
+            border-radius: 0.75em;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid grey;
+        }
+
+        .meta-data {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        .show-more {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <header>
+        <nav>
+            <a>Home</a>
+            <a>About Us</a>
+            <a>Help</a>
+        </nav>
+        <button>Sign In</button>
+    </header>
+    <div>
+        <div class="card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541">
+            <div class="meta-data">
+                <p>Name: Likhilesh</p>
+                <p>City: Delhi</p>
+                <button class="show-more">Show More</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?_=20150327203541">
+            <div class="meta-data">
+                <p>Name: Himanshu</p>
+                <p>City: Jaipur</p>
+                <button class="show-more">Show More</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h6>Copyrights reserved &copy;Likhilesh.xyz</h6>
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
