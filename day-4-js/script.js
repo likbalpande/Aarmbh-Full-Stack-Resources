@@ -100,29 +100,62 @@
 
 // ------------------------------------------------
 
-const printPretty1 = (x) => {
-    console.log("------------");
-    console.log("-->", x);
-    console.log("------------");
-};
+// const printPretty1 = (x) => {
+//     console.log("------------");
+//     console.log("-->", x);
+//     console.log("------------");
+// };
 
-const printPretty2 = (x) => {
-    console.log("**************");
-    console.log("-->", x);
-    console.log("**************");
-};
+// const printPretty2 = (x) => {
+//     console.log("**************");
+//     console.log("-->", x);
+//     console.log("**************");
+// };
 
-const sum = (a, b, cb) => {
-    const ans = a + b;
-    cb(ans);
-};
+// const sum = (a, b, cb) => {
+//     const ans = a + b;
+//     cb(ans);
+// };
 
-const num1 = 10;
-const num2 = 20;
+// const num1 = 10;
+// const num2 = 20;
 
-sum(num1, num2, printPretty1);
+// sum(num1, num2, printPretty1);
 
-// Here, "sum" is called a Higher Order Function (HoF)
-// and, "printPretty1" is a callback function
+// // Here, "sum" is called a Higher Order Function (HoF)
+// // and, "printPretty1" is a callback function
 
 // ------------------------------------------------
+
+// DOM & Events
+// const changeCardColor = (cardElement) => {
+//     cardElement.style.backgroundColor = "blue";
+// };
+
+// const cards = window.document.getElementsByClassName("card");
+
+// // function invocation
+// changeCardColor(cards[0]);
+
+// ------------------------------------------------
+
+// We will let the browser run this function whenever the card is clicked
+
+// Type 1: <div onclick="changeCardColor(event)"></div>
+
+// --> Note that "event" is a keyword in html which you should write explicitly
+//     to pass on the event to the handler function
+
+// DOM & Events
+const changeCardColor = (ev, idx) => {
+    const cards = window.document.getElementsByClassName("card");
+    console.log("-->", cards[idx].style.backgroundColor);
+
+    if (cards[idx].style.backgroundColor === "yellow") {
+        cards[idx].style.backgroundColor = "blue";
+        cards[idx].style.color = "white";
+    } else {
+        cards[idx].style.backgroundColor = "yellow";
+        cards[idx].style.color = "black";
+    }
+};
