@@ -149,8 +149,10 @@
 // DOM & Events
 const changeCardColor = (ev, idx) => {
     const cards = window.document.getElementsByClassName("card");
+    // debug
     console.log("-->", cards[idx].style.backgroundColor);
 
+    // fix --> getComputedStyles (optional)
     if (cards[idx].style.backgroundColor === "yellow") {
         cards[idx].style.backgroundColor = "blue";
         cards[idx].style.color = "white";
