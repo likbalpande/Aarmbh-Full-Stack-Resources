@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: yellow;
+            max-width: 400px;
+            margin: 32px auto;
+            padding: 24px;
+            border-radius: 20px;
+            border: 1px solid brown;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="handleFormSubmit(event)" onreset="handleFormClear(event)">
+        <div>
+            <label for="user-full-name">Name:</label>
+            <input type="text" placeholder="Your Name" id="user-full-name" name="fullName">
+        </div>
+        <div>
+            <label for="user-email">Email:</label>
+            <input type="email" placeholder="Your Email" id="user-email" name="email">
+        </div>
+        <div>
+            <label for="user-phone-number">Phone Number:</label>
+            <input type="text" placeholder="Your Phone Number" id="user-phone-number" name="phoneNumber">
+        </div>
+        <button type="reset">Clear</button>
+        <button>Submit</button>
+    </form>
+    <div id="root"></div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
