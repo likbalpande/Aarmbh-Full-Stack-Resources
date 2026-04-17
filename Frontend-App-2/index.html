@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App - 2</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #root {
+            display: flex;
+            padding: 48px;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            padding-right: 24px;
+            border: 2px solid brown;
+            border-radius: 16px;
+
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            overflow: hidden;
+        }
+
+        img {
+            max-height: 125px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header></header>
+    <main id="root">
+        <div class="card">
+            <img
+                src="https://cloud-computing-lectures-likhilesh-abcdxyz.s3.ap-south-1.amazonaws.com/likhi-laptop.jpg" />
+            <div class="product-info">
+                <h4>Macbook Pro M1 - 2022</h4>
+                <p>Price: $1100</p>
+                <p>Rating: 4.9⭐️</p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        function main(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                const newCard = document.createElement("div");
+                newCard.className = "card";
+                newCard.innerHTML = `
+                        <img src="${arr[i].thumbnail}" />
+                        <div class="product-info">
+                            <h4> ${arr[i].title} </h4>
+                            <p>Price: ${arr[i].price} </p>
+                            <p>Rating: ${arr[i].rating} ⭐️</p>
+                        </div>
+                    `;
+                const root = document.getElementById("root");
+                root.appendChild(newCard);
+            }
+        }
+
+        async function getData() {
+            const URL = "http://localhost:5001/products";
+            const response = await fetch(URL);
+            const data = await response.json();
+            console.log(data);
+
+            main(data.products);
+        }
+
+        getData();
+    </script>
+</body>
+
+</html>
