@@ -7,6 +7,8 @@ const handleFormSubmit = (e) => {
     const email = e.target.email.value;
     const phoneNumber = e.target.phoneNumber.value;
 
+    console.log(fullName, email, phoneNumber);
+
     // create a new element
     const cardContainer = document.createElement("div");
 
