@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App - 2</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            gap: 64px;
+            padding: 24px 32px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            font-size: 18px;
+        }
+
+        #root {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            background-color: rgb(242, 217, 127);
+            padding: 24px 32px;
+            border-radius: 16px;
+            border: 2px solid rgb(221, 188, 69);
+        }
+
+        .container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 4px 8px;
+            border-radius: 6px;
+            outline: none;
+            border: 1px solid brown;
+        }
+
+        button {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <header>
+        <h3>Product Inventory</h3>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./add-product.html">Add Product</a>
+        </nav>
+    </header>
+    <main id="root">
+        <form onsubmit="handleFormSubmit(event)">
+            <div class="container">
+                <label>Title:</label>
+                <input type="text" name="title" placeholder="Product Title" required>
+            </div>
+            <div class="container">
+                <label>Price:</label>
+                <input type="number" name="price" placeholder="Product Price" required>
+            </div>
+            <div class="container">
+                <label>Rating:</label>
+                <input type="number" name="rating" placeholder="Product Rating" required>
+            </div>
+            <button>Add Product</button>
+        </form>
+    </main>
+    <footer></footer>
+
+
+    <script>
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const productTitle = e.target.title.value;
+            const productPrice = e.target.price.value;
+            const productRating = e.target.rating.value;
+
+            const response = await fetch('http://localhost:5001/products', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: productTitle,
+                    price: productPrice,
+                    rating: productRating,
+                }),
+                headers: {
+                    'content-type': 'application/json'
+                }
+            });
+
+            alert('Product added!');
+        }
+    </script>
+</body>
+
+
+</html>
