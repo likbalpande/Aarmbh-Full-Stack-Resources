@@ -86,6 +86,7 @@
                            <h4> ${arr[i].title} </h4>
                            <p>Price: ${arr[i].price} </p>
                            <p>Rating: ${arr[i].rating} ⭐️</p>
+                           <button onclick="handleEdit(${arr[i].id})">Edit</button>
                            <button onclick="handleDeleteProduct(${arr[i].id})">Delete</button>
                        </div>
                    `;
@@ -114,6 +115,13 @@
             });
 
             window.location.reload();
+        }
+
+        function handleEdit(productId) {
+            window.open(`./edit-product.html?id=${productId}`);
+            // example: ./edit-product.html?id=1
+            // example: ./edit-product.html?id=17
+            // example: ./edit-product.html?id=8
         }
     </script>
 </body>
