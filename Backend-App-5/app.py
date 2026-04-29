@@ -89,6 +89,39 @@ def delete_product(product_id):
     }
 
 
+
+# Here we update a product in database by product-id
+# for example --> PUT http://localhost:5001/products/2
+@app.route("/products/<int:product_id>", methods=["PUT", "PATCH"])
+def update_product(product_id):
+
+    data = request.get_json()
+
+    if not data:
+        return {"error": "No data provided"}, 400
+
+    # Check if product exists
+    check = supabase.table("products").select("*").eq("id", product_id).execute()
+
+    if not check.data:
+        return {"error": "Product not found"}, 404
+
+    # Prepare update fields (only update what is provided)
+    update_data = {}
+
+    if "price" in data and data["price"] <= 0:
+        return {"error": "Invalid price"}, 400
+
+    # Perform update
+    res = supabase.table("products").update(data).eq("id", product_id).execute()
+
+    return {
+        "message": "Product updated successfully",
+        "product": res.data
+    }
+
+
+
 # ---------------- Run the App ---------------- #
 if __name__ == "__main__":
     app.run(port=5001, debug=True)
