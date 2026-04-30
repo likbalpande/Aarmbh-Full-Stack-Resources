@@ -110,7 +110,7 @@
             const productPrice = e.target.price.value;
             const productRating = e.target.rating.value;
 
-            const response = await fetch('http://localhost:5001/products', {
+            const response = await fetch('https://aarmbh-full-stack-resources.onrender.com/products', {
                 method: 'POST',
                 body: JSON.stringify({
                     title: productTitle,
