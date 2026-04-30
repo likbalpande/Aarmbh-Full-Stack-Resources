@@ -109,7 +109,7 @@ def update_product(product_id):
     # Prepare update fields (only update what is provided)
     update_data = {}
 
-    if "price" in data and data["price"] <= 0:
+    if "price" in data and float(data["price"]) <= 0:
         return {"error": "Invalid price"}, 400
 
     # Perform update
